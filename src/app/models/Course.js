@@ -5,12 +5,14 @@ const mongooseDelete = require('mongoose-delete');
 const Schema = mongoose.Schema;
 
 const Course = new Schema({
+    _id: {type: Numder,},
     name: {type: String},
     description: {type: String},
     image: {type: String},
     slug: { type: String, slug: 'name', unique: true,},
     videoId: {type: String, required: true,},
   }, {
+    _id: false,
     timestamps: true,
 });
 
